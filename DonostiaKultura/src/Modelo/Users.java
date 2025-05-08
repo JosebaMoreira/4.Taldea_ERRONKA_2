@@ -1,9 +1,6 @@
 package Modelo;
 
-public class Users {
-	private String dni;
-	private String name;
-	private String surname;
+public class Users extends People {
 	private String email;
 	private String password;
 	private String phoneNumber;
@@ -12,38 +9,12 @@ public class Users {
 	public Users() {
 	}
 
-	public Users(String dni, String name, String surname, String email, String password, String phoneNumber,String rol) {
-		this.dni = dni;
-		this.name = name;
-		this.surname = surname;
+	public Users(String dni,String name,String surname,String email, String password, String phoneNumber, String rol) {
+		super(dni,name,surname);
 		this.email = email;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
 		this.rol = rol;
-	}
-
-	public String getDni() {
-		return dni;
-	}
-
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getSurname() {
-		return surname;
-	}
-
-	public void setSurname(String surname) {
-		this.surname = surname;
 	}
 
 	public String getEmail() {
@@ -77,10 +48,5 @@ public class Users {
 	public void setRol(String rol) {
 		this.rol = rol;
 	}
-	
-	
-	
-	
-	
-	
+		
 }
