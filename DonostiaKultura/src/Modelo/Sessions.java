@@ -60,10 +60,11 @@ public class Sessions {
 	public void setFormationID(int formationID) {
 		this.formationID = formationID;
 	}
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Sessions [sessionID=" + sessionID + ", day=" + day + ", hour=" + hour + ", capacity=" + capacity
+				+ ", formationID=" + formationID + "]";
+	}
 	
 }

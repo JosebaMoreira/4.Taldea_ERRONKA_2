@@ -37,8 +37,10 @@ public class Reservations {
 	public void setSessionID(int sessionID) {
 		this.sessionID = sessionID;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Reservations [reservationID=" + reservationID + ", userID=" + userID + ", sessionID=" + sessionID + "]";
+	}
 	
 }

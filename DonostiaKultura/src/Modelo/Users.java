@@ -1,52 +1,31 @@
 package Modelo;
 
-public class Users extends People {
-	private String email;
+public abstract class Users {
+	private String dni;
 	private String password;
-	private String phoneNumber;
-	private String rol;
 	
 	public Users() {
 	}
-
-	public Users(String dni,String name,String surname,String email, String password, String phoneNumber, String rol) {
-		super(dni,name,surname);
-		this.email = email;
+	
+	public Users(String dni, String password) {
+		this.dni = dni;
 		this.password = password;
-		this.phoneNumber = phoneNumber;
-		this.rol = rol;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getDni() {
+		return dni;
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
-	public void setPassword(String password) {
+	public void setName(String password) {
 		this.password = password;
 	}
-
-	public String getPhoneNumber() {
-		return phoneNumber;
+	@Override
+	public String toString() {
+		return "People [dni=" + dni + ", password=" + password + "]";
 	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public String getRol() {
-		return rol;
-	}
-
-	public void setRol(String rol) {
-		this.rol = rol;
-	}
-		
 }

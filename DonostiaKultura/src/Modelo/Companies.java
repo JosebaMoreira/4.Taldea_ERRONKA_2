@@ -37,10 +37,10 @@ public class Companies {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Companies [CIF=" + CIF + ", name=" + name + ", address=" + address + "]";
+	}
 	
 }

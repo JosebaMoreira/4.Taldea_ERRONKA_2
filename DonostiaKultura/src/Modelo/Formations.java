@@ -61,10 +61,11 @@ public class Formations {
 	public void setCompanyID(String companyID) {
 		this.companyID = companyID;
 	}
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Formations [formationID=" + formationID + ", name=" + name + ", description=" + description
+				+ ", pecualirity=" + pecualirity + ", companyID=" + companyID + "]";
+	}
 	
 }
