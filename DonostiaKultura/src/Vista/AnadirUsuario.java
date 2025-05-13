@@ -12,6 +12,8 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class AnadirUsuario extends JFrame {
 
@@ -159,6 +161,11 @@ public class AnadirUsuario extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("VOLVER");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		btnNewButton_1.setFont(new Font("Arial", Font.PLAIN, 16));
 		btnNewButton_1.setBackground(Color.LIGHT_GRAY);
 		btnNewButton_1.setBounds(811, 505, 100, 30);
