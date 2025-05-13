@@ -24,5 +24,21 @@ public class Coordinador {
 	public Coordinador() {
 	}
 
-	
+	public static void visualizarDatos(DefaultTableModel tableModel) {
+		
+		AdminsConnect amc = new AdminsConnect();
+		try {
+			ArrayList<Admins> adminsList = amc.getAdmins();
+			
+            tableModel.setRowCount(0);
+
+            for(Admins admin: adminsList) {
+            	
+            }
+            
+		}catch (SQLException e) {
+            e.printStackTrace();
+        }
+		
+	}
 }
