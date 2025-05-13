@@ -118,6 +118,7 @@ public class VisualizarUsuarios extends JFrame {
 
 		table = new JTable(tableModel);
 		scrollPane.setViewportView(table);
+		//
 		
 		
 		JButton btnNewButton_2 = new JButton("REALIZAR COPIA DE SEGURIDAD");
