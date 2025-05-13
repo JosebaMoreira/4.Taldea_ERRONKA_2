@@ -24,6 +24,8 @@ public class VisualizarUsuarios extends JFrame {
 	private JTextField txtApellido;
 	private JTextField txtDni;
 	private JTable table;
+	public DefaultTableModel tableModel;
+
 
 	/**
 	 * Launch the application.
@@ -112,11 +114,11 @@ public class VisualizarUsuarios extends JFrame {
 		scrollPane.setBounds(84, 182, 771, 240);
 		contentPane.add(scrollPane);
 		
-		tableModel = new DefaultTableModel(new Object[] { "DNI", "Nombre", "Apellido", "Rol", "Mail", "Telefono", "Contraseña" },
-                0);
+		tableModel = new DefaultTableModel(new Object[] { "DNI", "Nombre", "Apellido", "Rol", "Mail", "Telefono", "Contraseña" },0);
 
 		table = new JTable(tableModel);
 		scrollPane.setViewportView(table);
+		//
 		
 		
 		JButton btnNewButton_2 = new JButton("REALIZAR COPIA DE SEGURIDAD");
