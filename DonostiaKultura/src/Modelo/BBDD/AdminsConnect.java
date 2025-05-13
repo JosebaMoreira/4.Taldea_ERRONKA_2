@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import Modelo.Admins;
-import Modelo.Users;
 
 public class AdminsConnect {
 	private static Connection conexion() {
@@ -28,7 +27,7 @@ public class AdminsConnect {
 	public static ArrayList<Admins>getAdmins()throws SQLException{
 		Connection con = conexion();
 		Statement st = con.createStatement();
-		String consulta = "SELECT * FROM Admin";
+		String consulta = "SELECT * FROM Admins";
 		ResultSet resultSet = (ResultSet)st.executeQuery(consulta);
 		ArrayList<Admins> adminList = new ArrayList<Admins>();
 		
@@ -49,4 +48,24 @@ public class AdminsConnect {
 	}
 		return adminList;
 }
+	public void AnadirUsuario(Admins ad)throws SQLException{
+		Connection con = conexion();
+		Statement st = con.createStatement();
+		String consulta = "INSERT into Admins"
+				+"(DNI,name,surname,email,password,phoneNumber,rol)"
+				+"VALUES('"+ad.getDni()+"','"+ad.getName()+"','"+ad.getSurname()+"','"+ad.getEmail()+"','"+ad.getPassword()+"','"+ad.getPhoneNumber()+"','"+ad.getRol()+"');";
+		st.execute(consulta);
+		System.out.println("El usuario se ha creado correctamente");
+		
+		con.close();
+	}
+	
+	public void EliminarUsuario(Admins ad) throws SQLException {
+		Connection con = conexion();
+		Statement st = con.createStatement();
+		String consulta= "DELETE FROM Admins WHERE DNI='"+ad.getDni()+"'";
+        st.execute(consulta);
+        System.out.println("El usuario se ha eliminado");
+		con.close();
+	}
 }
