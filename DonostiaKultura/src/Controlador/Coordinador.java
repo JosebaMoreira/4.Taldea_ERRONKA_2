@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 import Modelo.Admins;
 import Modelo.Clients;
+import Modelo.BBDD.*;
 
 public class Coordinador {
 
