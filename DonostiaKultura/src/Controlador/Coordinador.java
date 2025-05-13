@@ -17,5 +17,12 @@ public class Coordinador {
 	AdminsConnect ac = new AdminsConnect();
 	Admins admin = new Admins();
 	
+	public Coordinador(AdminsConnect ac, Admins admin) {
+		this.ac = ac;
+		this.admin = admin;
+	}
+	public Coordinador() {
+	}
+
 	
 }
