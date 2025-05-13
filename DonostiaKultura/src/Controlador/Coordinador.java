@@ -10,11 +10,12 @@ import javax.swing.table.DefaultTableModel;
 
 import Modelo.Admins;
 import Modelo.Clients;
+import Modelo.BBDD.*;
 
 public class Coordinador {
 
+	AdminsConnect ac = new AdminsConnect();
 	Admins admin = new Admins();
-	Clients cliente = new Clients();
 	
 	
 }
