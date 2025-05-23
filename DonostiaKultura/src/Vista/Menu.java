@@ -1,5 +1,4 @@
 package Vista;
-
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -14,13 +13,21 @@ import javax.swing.UIManager;
 import java.awt.Font;
 import java.awt.Toolkit;
 
+/**
+ * Clase del menú principal de gestión de usuarios.
+ * Desde esta ventana se puede acceder a las funciones de añadir, eliminar,modificar y visualizar usuarios.
+ * @author 4.Taldea
+ * @version 1.0
+ * 
+ */
 public class Menu extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-
+	
 	/**
-	 * Launch the application.
+	 * Método que inicia la aplicación mostrando la ventana del menú.
+	 * @param args Argumentos de línea de comandos.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -34,9 +41,9 @@ public class Menu extends JFrame {
 			}
 		});
 	}
-
+	
 	/**
-	 * Create the frame.
+	 * Constructor de la clase Menu.
 	 */
 	public Menu() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\1AW3-13\\git\\DonostiaKultura\\DonostiaKultura\\DK.png"));
@@ -51,6 +58,11 @@ public class Menu extends JFrame {
 		
 		JButton btnAnadir = new JButton("AÑADIR");
 		btnAnadir.addActionListener(new ActionListener() {
+			/**
+			 * Acción al hacer clic en el botón "AÑADIR".
+			 * Abre la ventana AnadirUsuario.
+			 * @param e Evento generado al hacer clic en el botón.
+			 */
 			public void actionPerformed(ActionEvent e) {
 				AnadirUsuario frame = new AnadirUsuario();
 				frame.setVisible(true);
@@ -62,6 +74,11 @@ public class Menu extends JFrame {
 		
 		JButton btnEliminar = new JButton("ELIMINAR");
 		btnEliminar.addActionListener(new ActionListener() {
+			/**
+			 * Acción al hacer clic en el botón "ELIMINAR".
+			 * Abre la ventana EliminarUsuario.
+			 * @param e Evento generado al hacer clic en el botón.
+			 */
 			public void actionPerformed(ActionEvent e) {
 				EliminarUsuario frame = new EliminarUsuario();
 				frame.setVisible(true);
@@ -72,11 +89,33 @@ public class Menu extends JFrame {
 		contentPane.add(btnEliminar);
 		
 		JButton btnModificar = new JButton("MODIFICAR");
+		btnModificar.addActionListener(new ActionListener() {
+			/**
+			 * Acción al hacer clic en el botón "MODIFICAR".
+			 * Abre la ventana ModificarUsuario
+			 * @param e Evento generado al hacer clic en el botón.
+			 */
+			public void actionPerformed(ActionEvent e) {
+				ModificarUsuario frame = new ModificarUsuario();
+				frame.setVisible(true);
+			}
+		});
 		btnModificar.setFont(new Font("Arial", Font.PLAIN, 30));
 		btnModificar.setBackground(new Color(192, 192, 192));
 		contentPane.add(btnModificar);
 		
 		JButton btnVisualizar = new JButton("VISUALIZAR");
+		btnVisualizar.addActionListener(new ActionListener() {
+			/**
+			 * Acción al hacer clic en el botón "VISUALIZAR".
+			 * Abre la ventana VisualizarUsuarios
+			 * @param e Evento generado al hacer clic en el botón.
+			 */
+			public void actionPerformed(ActionEvent e) {
+				VisualizarUsuarios frame = new VisualizarUsuarios();
+				frame.setVisible(true);
+			}
+		});
 		btnVisualizar.setFont(new Font("Arial", Font.PLAIN, 30));
 		btnVisualizar.setBackground(new Color(192, 192, 192));
 		contentPane.add(btnVisualizar);
