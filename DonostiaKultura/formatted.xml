@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservas>
+   <reserva>
+      <reservationID>12</reservationID>
+      <userID>111111111N</userID>
+      <sessionID>19</sessionID>
+   </reserva>
+</reservas>
